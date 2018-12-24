@@ -16,7 +16,9 @@
 	"imdbID":"tt0480249",
 	"Type":"movie",
 	"Response":"True",
-	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/sights_skydeck.jpg"]
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fk1.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fk2.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fk4.JPG"]
 	},
 	{"Title":"Fakultas Kedokteran Gigi",
 	"Year":"2007",
