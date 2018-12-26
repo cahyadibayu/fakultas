@@ -1,88 +1,401 @@
-package com.example.idotalmor.movietabjsonproject.Adapter;
-
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-import com.example.idotalmor.movietabjsonproject.Models.Movie;
-import com.example.idotalmor.movietabjsonproject.MovieActivity;
-import com.example.idotalmor.movietabjsonproject.R;
-import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
-
-
-public class viewAdapter extends BaseAdapter {
-
-    Context context;
-    ArrayList<Movie> movies;
-
-    public viewAdapter(Context context,ArrayList<Movie> movies){
-
-        this.context = context;
-        this.movies = movies;
-
-    }
-
-    @Override
-    public int getCount() {
-        return movies.size();
-    }
-
-    @Override
-    public Movie getItem(int position) {
-        return movies.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
-
-        final Movie movie = getItem(position);
-
-        if (convertView == null){
-
-            final LayoutInflater layoutInflater = LayoutInflater.from(context);
-            convertView = layoutInflater.inflate(R.layout.movie_layout, null);
-        }
-
-        ImageView imageView = convertView.findViewById(R.id.movieImg);
-        Uri uri = Uri.parse(movie.poster);
-        Picasso.get().load(uri).into(imageView);
-
-        TextView titleTextView = convertView.findViewById(R.id.movieTTL);
-        TextView tanggalTextView = convertView.findViewById(R.id.tanggal);
-
-        titleTextView.setText(movie.title);
-
-        String combinedtanggal = "";
-        for(int i=0;i<movie.tanggal.length;i++){
-            combinedtanggal += movie.tanggal[i];
-        }
-        tanggalTextView.setText(combinedtanggal);
-
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context,MovieActivity.class);
-                intent.putExtra("Movie",position);
-                intent.putExtra("Type",movie.type);
-                context.startActivity(intent);
-            }
-        });
-        convertView.setClickable(true);
-
-
-
-        return convertView;
-    }
-}
+[
+	{"Title":"Fakultas Kedokteran",
+	"Genre":"22/12/2018",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_skydeck.jpg",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Year":"<b>Fakultas Kedokteran</b> merupakan fakultas di UI. IyA, MEMANG DI UI",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fk1.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fk2.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fk4.JPG"]
+	},
+	{"Title":"Fakultas Kedokteran Gigi",
+	"Genre":"22/12/2018",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/fkg1.JPG",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Year":"2007",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fkg4.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkg2.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkg3.jpg"]
+	},
+	{"Title":"Fakultas Kesehatan Masyarakat",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/fkm5.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fkm1.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkm2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkm3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkm7.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkm6.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fkm8.JPG"]
+	},
+	{"Title":"Fakultas Ilmu Keperawatan",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/fik1.jpg",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fik2.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fik3.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fik5.jpg"]
+	},
+	{"Title":"Fakultas Farmasi",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/ff1.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/ff2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ff3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ff4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ff5.jpg"]
+	},
+	{"Title":"Fakultas Hukum",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_navy_pier.jpg",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fh3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fh4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fh2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fh1.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fh5.JPG"]
+	},
+	{"Title":"Fakultas Ekonomi dan Bisnis",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_millennium_park.jpg",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/feb1.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/feb2.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/feb4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/feb5.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/feb6.JPG"]
+	},
+	{"Title":"Fakultas Ilmu Budaya",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_art_institute.jpg",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fib2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fib3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fib4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fib5.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fib6.JPG"]
+	},
+	{"Title":"Fakultas Psikologi",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/psi2.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/psi3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/psi4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/psi5.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/psi6.JPG"]
+	},
+	{"Title":"Fakultas Ilmu Sosial dan Politik",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip5.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fisip1.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip7.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip8.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip10.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip12.JPG"]
+	},
+	{"Title":"Fakultas Ilmu Administrasi",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip11.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fisip2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip6.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fisip9.JPG"]
+	},
+	{"Title":"Fakultas Teknik",
+	"Year":"Konten adalah isi dari suatu bagian yang menjelaskan inti permasalahan secara detail\nJika kita, selaku mahasiswa, menggunakan J-SON untuk updaet akan terarsa lama",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"poin2",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_chicago_architecture_tour.jpg",
+	"imdbID":"eng.ui.ac.id",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/ft2.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ft1.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ft3.jpg",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ft5.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ft6.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ft7.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/ft8.JPG"]
+	},
+	{"Title":"Fakultas Ilmu Komputer",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_riverwalk.jpg",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fasilkom2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fasilkom1.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/fasilkom3.JPG"]
+	},
+	{"Title":"Fakultas Matematika & Ilmu Pengetahuan Alam",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/mipa6.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/mipa2.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/mipa1.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/mipa3.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/mipa4.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/mipa5.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/mipa7.JPG"]
+	},
+	{"Title":"Program Vokasi",
+	"Year":"2007",
+	"Genre":"22/12/2018",
+	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
+	"Plot":"Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/vokasi4.JPG",
+	"imdbID":"tt0480249",
+	"Type":"movie",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/vokasi1.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/vokasi5.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/vokasi6.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/vokasi7.JPG",
+	"https://raw.githubusercontent.com/afathurizki/gambar/master/vokasi8.JPG"]
+	},
+	{"Title":"Informasi Umum Beasiswa",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"23/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/apply_scholarship.jpg",
+	"imdbID":"tt0944947",
+	"Type":"series",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/apply_scholarship.jpg"]
+	},
+	{"Title":"Cara Melamar Beasiswa",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"23/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/document_needed.jpg",
+	"imdbID":"tt0944947",
+	"Type":"series",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/document_needed.jpg"]
+	},
+	{"Title":"Cara Menjadi Donatur",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"23/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/donatur.jpg",
+	"imdbID":"tt0944947",
+	"Type":"series",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/donatur.jpg"]
+	},
+	{"Title":"Frequently Ask Question (FAQ)",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"23/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/faq.jpg",
+	"imdbID":"tt0944947",
+	"Type":"series",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/faq.jpg"]
+	},
+	{"Title":"Pembayaran Biaya Kuliah",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"24/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/bayar.jpg",
+	"imdbID":"tt0944947",
+	"Type":"payment",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/bayar.jpg"]
+	},
+	{"Title":"Pengajuan Cicilan",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"24/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/cicilan.jpg",
+	"imdbID":"tt0944947",
+	"Type":"payment",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/cicilan.jpg"]
+	},
+	{"Title":"Penurunan Biaya Kuliah",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"24/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/penurunan_biaya.jpg",
+	"imdbID":"tt0944947",
+	"Type":"payment",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/penurunan_biaya.jpg"]
+	},
+	{"Title":"Daftar Biaya Kuliah",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"24/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/ukt.jpg",
+	"imdbID":"tt0944947",
+	"Type":"payment",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/ukt.jpg"]
+	},
+	{"Title":"Pengajuan Cuti",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"25/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/cuti.jpg",
+	"imdbID":"tt0944947",
+	"Type":"general",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/cuti.jpg"]
+	},
+	{"Title":"Perpustakaan",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"25/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/perpusat.jpg",
+	"imdbID":"tt0944947",
+	"Type":"general",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/perpusat.jpg"]
+	},
+	{"Title":"Peminjaman Fasilitas",
+	"Year":"2011–",
+	"Rated":"TV-MA",
+	"Released":"17 Apr 2011",
+	"Runtime":"56 min",
+	"Genre":"25/12/2018",
+	"Actors":"Peter Dinklage, Lena Headey, Emilia Clarke, Kit Harington",
+	"Plot":"While a civil war brews between several noble families in Westeros, the children of the former rulers of the land attempt to rise up to power. Meanwhile a forgotten race, bent on destruction, plans to return after thousands of years in the North.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/fasilitas.jpg",
+	"imdbID":"tt0944947",
+	"Type":"general",
+	"totalSeasons":"7",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fasilitas.jpg"]
+	},
+	{"Title":"Rute Bis Kuning",
+	"Year":"2016–",
+	"Rated":"TV-MA",
+	"Released":"30 Sep 2016",
+	"Runtime":"55 min",
+	"Genre":"25/12/2018",
+	"Actors":"Mahershala Ali, Mike Colter, Frankie Faison, Erik LaRay Harvey",
+	"Plot":"Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire.",
+	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/bikun.jpg",
+	"imdbID":"tt3322314",
+	"Type":"general",
+	"totalSeasons":"1",
+	"Response":"True",
+	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/bikun.jpg"]
+	}
+]
