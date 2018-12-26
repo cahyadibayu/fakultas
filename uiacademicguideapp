@@ -1,5 +1,7 @@
 [
 	{"Title":"Fakultas Kedokteran",
+	"Comment"="Genre --> Tanggal di depan, Poster --> Gambar di depan, Actors --> Poin-poin pentin, Plot --> Penjelasan Umum, Year --> Konten",
+	"Comment2"="imdbID --> Website, Type --> Data masuk mana (Faculty, Scholar, Payment, General), Images --> Gambar di dalam konten",
 	"Genre":"22/12/2018",
 	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/sights_skydeck.jpg",
 	"Actors":"* List Departemen\n* List Jurusan\n* Fasilitas",
