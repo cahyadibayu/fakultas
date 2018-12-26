@@ -386,17 +386,13 @@
 	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/fasilitas.jpg"]
 	},
 	{"Title":"Rute Bis Kuning",
-	"Konten":"2016–",
-	"Rated":"TV-MA",
-	"Released":"30 Sep 2016",
-	"Runtime":"55 min",
 	"Tanggal":"25/12/2018",
-	"Poin":"Mahershala Ali, Mike Colter, Frankie Faison, Erik LaRay Harvey",
-	"Umum":"Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire.",
 	"Poster":"https://raw.githubusercontent.com/afathurizki/gambar/master/bikun.jpg",
-	"website":"tt3322314",
+	"Poin":"* Rute Bis Kuning\n* Jadwal Keberangkatan\n*Jadwal Operasional\n* Aplikasi Bikun",
+	"Umum":"Bis Kuning atau sering dikenal degan nama Bikun adalah salah satu fasilitas yang disediakan oleh pihak Universitas Indonesia sebgai sarana transportasi umum. Bikun dapat dipakai oleh umum dan tidak perlu membayar biaya apapun. Bikun selalu menjadi andalan terutama bagi mahasiswa UI untuk menuju ke tujuan yang diinginkan. Selain karena Bikun sudah baik dari segi operasionalnya, Bikun juga mendukung gerakan dari UI untuk menghemat polusi kendaraan dengan menggunakan kendaraan umum.",
+	"Konten":"Untuk menaiki Bikun, penumpang perlu menunggu di halte yang telah disediakan di seluruh Fakultas dan Sarana di UI. Selain di halte, Bikun tidak akan berhenti untuk menaikkan penumpang. Selain itu, penumpang juga perlu mengetahui rute dari Bikun yang melintas.\nUmumnya, Bikun yang sedang beroperasi dibagi menjadi dua rute, yaitu rute merah dan rute biru. Untuk mengetahui perbedaan dari Bikun rute merah atau biru dapat dilihat dari papan warna yang diletakkan dibagian kiri bawah Bikun. Perbedaan kedua rute tersebut menunjukkan jalur mana yang lebih dulu dilalui oleh Bikun, namun semua rute akan dimulai dari Halte Asrama. Berikut adalah rute bikun sesuai dengan warna rutenya\nRute Bikun Merah: Halte Asrama – Halte Gerbatama – Halte Stasiun UI — Halte FH — Halte Masjid UI — Halte Pondok Cina/Balairung — Halte RIK - Halte FIK – Halte FMIPA — Halte PNJ — Halte Vokasi/Kukusan Kelurahan — Halte FT — Halte FE - Halte FIB — Halte FISIP — Halte F.Psikologi — Halte Stasiun UI — Halte Gerbatama — Halte Asrama\nRute Bikun Biru: Halte Asrama – Halte Gerbatama – Halte Stasiun UI — Halte F.Psikologi — Halte FISIP — Halte FIB — Halte FE — Halte FT — Halte Vokasi/Kukusan Kelurahan — Halte PNJ — Halte FMIPA — Halte FIK — Halte FKM — Halte RIK — Halte Balairung/Pondok Cina — Halte Masjid UI - Halte FH – Halte Stasiun UI — Halte Gerbatama — Halte Asrama\n Untuk jadwal operasional Bikun, untuk hari Senin hingga Jumat Bikun akan beroperasi dari pukul 07.00 sampai 21.00, untuk hari sabtu dari pukul 07.00 hingga 17.00, dan untuk hari minggu dan tanggal merah bikun akan tidak beroperasi. Rentang keberangkatan bikun relatif dari 15 menit hingga 30 menit tiap Bikun.\nUntuk mengetahui lokasi Bikun terkini, sudah disediakan aplikasi yang bernama ManaBikun. Aplikasi ini dapat menunjukkan posisi aktual dari Bikun dan jadwal keberangkatan terkini. Aplikasi tersebut kini tersedia di Playstore.",
+	"website":"ui.ac.id/aplikasi-bis-kuning.html",
 	"Type":"general",
-	"totalSeasons":"1",
 	"Response":"True",
 	"Images":["https://raw.githubusercontent.com/afathurizki/gambar/master/bikun.jpg"]
 	}
